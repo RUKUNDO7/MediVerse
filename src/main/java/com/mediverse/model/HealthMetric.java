@@ -23,7 +23,7 @@ public class HealthMetric extends BaseEntity {
     @Column(nullable = false)
     private String type; // e.g., "BLOOD_PRESSURE", "GLUCOSE", "WEIGHT", "HEART_RATE"
 
-    @Column(nullable = false)
+    @Column(name = "metric_value", nullable = false)
     private String value; // String to handle ranges like "120/80" or simple numbers
 
     private String unit; // e.g., "mmHg", "mg/dL", "kg", "bpm"
