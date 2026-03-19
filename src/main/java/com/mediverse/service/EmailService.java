@@ -21,7 +21,7 @@ public class EmailService {
             helper.setSubject("[MediVerse] " + subject);
             helper.setText(htmlContent, true);
             mailSender.send(message);
-        } catch (MessagingException e) {
+        } catch (Exception e) {
             System.err.println("Failed to send email to " + to + ": " + e.getMessage());
         }
     }
